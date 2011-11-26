@@ -2,13 +2,20 @@
 <html>
 <head>
 	<title>Entertainment Director</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+      $("#activity").focus();
+    });
+	</script>
+
 </head>
 <body>
 	<h1>Here's alist of things you can do:</h1>
 	<br/>
 	<ul>
 	<% @things_to_do.each do |x| %>
-	<li><%= x %></li>
+	<li><%= escape_html x %></li>
 	<% end %>
 	</ul>
 	
