@@ -1,14 +1,14 @@
 require 'sinatra'
 require 'erb'
 
-things_to_do = [  "Ride bikes"
-                , "Read a book"
-                , "Draw"
-                , "Color"
-                , "Cards"
-                , "Origami"
-                , "Trampoline"
-                , "Legos"
+things_to_do = [  "Ride bikes",
+                  "Read a book",
+                  "Draw",
+                  "Color",
+                  "Cards",
+                  "Origami",
+                  "Trampoline",
+                  "Legos"
                ]
 
 class Array
@@ -27,6 +27,6 @@ configure do
 end
 
 get '/' do
-  @activity = things_to_do.randomly_pick(1)
+  @activity = things_to_do.randomly_pick(1)[0]
   erb :index
 end
