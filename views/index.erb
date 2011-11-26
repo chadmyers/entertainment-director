@@ -7,5 +7,12 @@
 	<h1>Here's something you can do:</h1>
 	<br/>
 	<h2><%= @activity%></h2>
+	
+	<hr/>
+	
+	<form action="add" method="post">
+	Activity: <input id="activity" type="text" name="activity">
+	<input type="submit" value="Add Activity">
+	</form>
 </body>
 </html>

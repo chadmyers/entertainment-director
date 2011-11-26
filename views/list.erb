@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entertainment Director</title>
+</head>
+<body>
+	<h1>Here's alist of things you can do:</h1>
+	<br/>
+	<ul>
+	<% @things_to_do.each do |x| %>
+	<li><%= x %></li>
+	<% end %>
+	</ul>
+	
+	<hr/>
+	
+	<a href="/">Back to home</a>
+</body>
+</html>
